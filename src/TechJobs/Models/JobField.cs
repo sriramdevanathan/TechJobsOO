@@ -20,7 +20,12 @@
 
         // Provide a basic case-insensitive search
         public bool Contains(string testValue)
-        {
+
+        { if (testValue == null)
+            {
+                return true;
+            }
+        else
             return Value.ToLower().Contains(testValue.ToLower());
         }
 
